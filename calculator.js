@@ -1,19 +1,4 @@
-function solution(n) {
-   let answer = 0;
-  let temp = '';
-  DFS(n){
-    if() 
-       else
-       
-  DFS(parseInt(n/3))
-  }
-  DFS(n);
-   temp+=String(n%3); 
-    answer.split('').reverse().join('');
-   
-    return answer;
-}
-         
+
  function solution(n) {
   let answer = 0;
   let temp = '';
@@ -28,6 +13,13 @@ function solution(n) {
   DFS(n);
  
     temp.split('').reverse().join('');
-    
+    parseInt(temp, 3)
     return answer;
+}
+
+
+
+///
+function solution(n) {
+  return parseInt(n.toString(3).split('').reverse().join(''),3)
 }
