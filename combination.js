@@ -90,7 +90,7 @@ function solution(numbers) {
     return answer.sort((a, b) => a - b)
 }
 
-
+///
 function solution(numbers) {
     let answer = [];
     let temp_arr = [] ;
@@ -105,5 +105,25 @@ function solution(numbers) {
     
     answer.sort((a,b)=>a-b)
    
+    return answer;
+}
+
+///    
+function solution(numbers) {
+    let answer = [];
+    let temp = [];
+    let sum;
+    for (let i=0; i<numbers.length-1; i++)
+        for (let j=i+1; j<numbers.length; j++) {
+            sum= numbers[i]+numbers[j]
+            temp.push(sum);
+        }
+          temp.sort((a,b) => a-b);
+            for (let x of temp) {
+              if(answer[answer.length - 1] !== x ) {
+                  answer.push(x);
+            }
+            
+        }
     return answer;
 }
