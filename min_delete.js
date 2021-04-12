@@ -1,3 +1,4 @@
+
 function solution(arr) {
     let answer=[] ;
     let min = arr[0];
@@ -11,4 +12,19 @@ function solution(arr) {
         if (i !== temp)  answer.push(arr[i]);
     }
       return answer;
+}
+
+///
+function solution(arr) {
+    let answer=[] ;
+    let temp = [] ;
+    if (arr.length === 1) answer.push(-1);
+    else {
+    for (let x of arr) {
+        temp.push(x);
+    } 
+    temp.sort((a,b) => (b-a));
+    answer = arr.filter(a=> a!== temp[temp.length -1]);
+    }
+    return answer;
 }
