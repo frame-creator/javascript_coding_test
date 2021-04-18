@@ -41,4 +41,49 @@ function solution(s) {
     return answer;
   
   
+///
+  function solution(s) {
+    let answer = 0;
+    let temp = [];
+    let amount_arr = [];
+    
+    function isL(m) {
+        for (let x of m) {
+            if (x === '(' || x === '[' || x === '{') temp.push(x);
+            if (x === ')')  {
+                if ( temp.length === 0 ) return false;
+                if ( temp.pop() !== '(' ) return false;
+                 
+            }
+             if (x === ']')  {
+                if ( temp.length === 0 ) return false;
+                if (temp.pop() !== '[' ) return false;
+                
+                
+                 
+            }
+            if (x === '}')  {
+                if ( temp.length === 0 ) return false;
+                if (temp.pop() !== '{' ) return false;
+                 
+                
+                
+            }
+            
+            }
+          if (temp.length > 0) return false;
+          return true;
+        }
+   
+    while (amount_arr.length <= s.length - 1 ) {
+     s = s.substr(1, s.length -1)+ s.split('').shift();
+        amount_arr.push(s);
+    }
+    
   
+    for(let x of amount_arr) {
+      if  (isL(x) === true) answer++;
+       
+    }
+    return answer;
+}  
