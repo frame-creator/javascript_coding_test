@@ -21,3 +21,11 @@ function solution(numbers) {
     Recursion(0 , numbers)
     return String(answer);
 }
+
+///
+function solution(numbers) {
+    let answer ;
+    answer = numbers.map(e => String(e)).sort((x, y) => (y+x) - (x+y)).join('');
+    if(answer[0] === '0') answer = answer[0];
+    return answer;
+}
